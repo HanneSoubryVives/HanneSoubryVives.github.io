@@ -1,0 +1,57 @@
+<!-- CSS kan inline, block or extern
+Wij gebruiken voor dit vak NOOIT inline!
+
+vb. inline (= in html code zelf): <p style="fontsize=2em"></p> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+
+  <!-- Style block : in html head
+  <style>
+    h1 {
+      color:blueviolet;
+    }
+    p {
+      font-size: 5em;
+    }
+  </style> -->
+
+  <!-- Extern stylesheet -->
+  <!-- media is by default screen,
+  media print kan gebruikt worden om een aparte stijl te gebruiken bij afprinten -->
+  <link rel="stylesheet" href="styles/style.css" media="screen">
+
+</head>
+<body>
+  <h1>Cursus CSS</h1>
+  <h1>Geschiedenis</h1>
+  <h2>Cursus JavaScript</h2>
+
+  <h1 class="styleYellow">Cursus HTML</h1>
+  <h1 class="styleYellow">Cursus JS</h1>
+
+  <h1 id="opmaak">Java</h1>
+<!--  <h1 id="opmaak">C++</h1>-->
+
+  <section>
+    <h1>NET</h1>
+
+    <span>
+      <h1>NET 2</h1>
+    </span>
+
+  </section>
+
+  <section class="styleYellow">
+    <h1>StyleYellow section</h1>
+
+    <span>
+      <h1>StyleYellow section 2</h1>
+    </span>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+h1, h2 {
+    color : darkred;
+    font-size : 5em;
+}
+
+/* style class (starts with .) */
+.styleYellow {
+    color : burlywood;
+}
+
+/* ID (starts with #), only 1-time use per html file */
+#opmaak {
+    color : darkorchid;
+}
+
+/* only if h1 element is direct child of a section element */
+section>h1 {
+    color : forestgreen;
+    font-size : 3em;
+}
+
+/* any decendant of section, childs and children of children...
+   this overrules section>h1 */
+section h1 {
+    color : deepskyblue;
+    font-size : 3em;
+}
+
+/* any decendant of sections that have styleYellow applied */
+section.styleYellow h1 {
+    color : hotpink;
+    font-size : 3em;
+}
