@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box demo</title>
+    <style>
+        body{
+            background-color: deepskyblue;
+            color: white;
+            /* inheritance op alles BEHALVE padding, margin en border properties*/
+            border: 2px solid darkred;
+        }
+
+        h1 {
+            background-color: mediumpurple;
+            width: 50%; /* textbox size */
+            /*width: 400px;*/
+            font-size: 2em;
+            border: 5px solid darkred;
+            /*margin-top: 0px;*/
+                                            /* kan bij beide */
+            padding: 50px 100px 30px 100px; /* top right bottom left*/
+            margin: 10px;                   /* all */
+            /* margin-left: 200px;
+            /* -> conflict: margin bestond al -> overschrijft de vorige, enkel de laatste verandering is zichtbaar*/
+            margin-left: auto;
+            margin-right: auto;
+            /* auto = verdeel resterende breedte -> links en rechts op auto = centreren onafhankelijk van schermbreedte*/
+            /* display: inline; */
+        }
+
+        span {
+            width: 300px;
+            /* bij inline elementen werkt width NIET, enkel bij block elementen */
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: darkcyan;
+            display: inline-block; /* gedraag je als een block, maar blijf wel op dezelfde regel (geen nieuwe lijn) */
+        }
+
+        p {
+            /* width: 300px; */
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: rebeccapurple;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1> VIVES </h1>
+    <h1>CSS</h1>
+    <p>Selector</p><img src="images/flower.jpg" alt="flower"/>
+    <span>element 1</span>
+    <span>element 2</span>
+    <span>element 3</span>
+
+</body>
+</html>
