@@ -1,0 +1,51 @@
+/* Global */
+/* ---------------------------- */
+body{
+    font-family: Helvetica, sans-serif;
+    /* eerste optie: gewenst font, tweede optie: generiek font plan-B */
+}
+
+a{ /* a of a:link is het zelfde*/
+    color: #EF233C;
+}
+
+/* Titles */
+/* ---------------------------- */
+h1, h2{
+    font-weight: normal;
+    /* h* font-weight is bold by default*/
+}
+h1{
+    font-size: 80px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+/* Header & Footer & Education block*/
+/* ---------------------------- */
+header, footer, .education{
+    padding: 30px;
+}
+
+header h1, header h2{
+    color: #EDF2F4;
+}
+
+header, footer{
+    color: #8D99AE;
+    background-color: #2B2D42;
+}
+
+header{
+    margin-bottom: 10px;
+}
+
+footer{
+    margin-top: 10px;
+}
+
+.education{
+    background-color: #8D99AE;
+}
