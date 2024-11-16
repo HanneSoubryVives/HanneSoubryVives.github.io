@@ -1,0 +1,48 @@
+/* ----- general ----- */
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 0.8em;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ----- top header ----- */
+body > section > header {
+    height: 200px;
+    background-image: url("../images/header.jpg");
+    background-size: cover;
+}
+
+body > section > header > h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+/* ----- navigation ----- */
+nav {
+    background-color: #444444;
+}
+
+nav > a {
+    font-weight: bold;
+    color: #54f57f;
+    margin: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* ----- articles ----- */
+article {
+    margin: 5px;
+    padding: 5px;
+    background-color: #ececed;
+    color: #434440;
+}
+
+article > header > h1 {
+    font-size: 30px;
+    text-decoration: underline;
+}
