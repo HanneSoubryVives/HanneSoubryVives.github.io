@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Specificity</title>
+    <style>
+        h1 {
+          color: yellow;
+          /*color: yellow !important;
+          als er meerdere importants zijn: dan wint de laatste in de code
+          vb. in dit geval komt de css link NA de style block, dus css overschrijft het*/
+        }
+    </style>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<!-- Style priority:
+ 1. !important style block or extern (laatste in code overschrijft)
+ 2. inline
+ 3. style block or extern (laatste in code overschrijft) -->
+
+<body>
+    <!--<h1 style="color: orangered">example 1</h1>-->
+    <h1>example 1</h1>
+
+    <header>
+        <h1>example 2</h1>
+    </header>
+
+    <header class="hoofd">
+        <h1>example 3</h1>
+    </header>
+</body>
+</html>
