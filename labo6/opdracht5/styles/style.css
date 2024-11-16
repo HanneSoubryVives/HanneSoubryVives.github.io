@@ -4,3 +4,8 @@ a {
     background-size: 17px 17px;
     background-repeat: no-repeat;
 }
+
+/*
+a::before {
+    content: url("../images/link_icon.png");
+}*/
