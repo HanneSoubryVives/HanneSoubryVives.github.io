@@ -1,0 +1,38 @@
+/* general */
+table {
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+td {
+    border: 1px dotted black;
+}
+
+th {
+    border: 1px dotted #c8bef0;
+}
+
+/* header rows */
+thead tr:first-child th {
+    background-color: #aaaac8;
+}
+
+thead tr:nth-child(2) th {
+    background-color: #232546;
+    color: #c8bef0
+}
+
+/* special days */
+tr td:first-child, tr td:last-child {
+    background-color: #ffdcdc;
+}
+
+tr td.freeDay {
+    background-color: #fa7878;
+}
+
+tr td.otherMonth {
+    background-color: lightgray;
+    color: gray;
+    border-color: gray;
+}
