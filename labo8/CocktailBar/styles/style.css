@@ -1,0 +1,68 @@
+/* ----- GENERAL -----*/
+body {
+    width: 95%;
+    margin: auto;
+    font: 1.2em "Verdana", "Helvetica", "Arial";
+}
+
+h1, h2 { color: #007e7e; }
+h1 { font-size: 150% }
+h2 { font-size: 130%; }
+
+a { color: dimgray; }
+
+.cursif {font-style: italic;}
+.bold {font-weight: bold;}
+
+/* ----- HEADER -----*/
+header img{
+    display: block;
+    margin: auto;
+}
+
+/* ----- CONTENT -----*/
+#content {
+    float: left;
+    width: 70%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+/* ----- GUARANTEE -----*/
+#guarantee {
+    background: #a7cece url(../images/background.gif) no-repeat top left;
+    border: 2px dashed white;
+    margin: 0 30px;
+    padding: 20px 20px 20px 80px;
+    color: #444444;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    line-height: 1.9em; /*line spacing*/
+}
+
+/* ----- WEEKLY SPECIALS -----*/
+#weeklySpecials a:hover { background-color: sandybrown; }
+#weeklySpecials h1 { color: black; }
+#weeklySpecials h2 { color: #963244; }
+#weeklySpecials {
+    padding: 2%;
+    margin: 0;
+    border: 2px solid #007e7e;
+    width: 30%;
+    box-sizing: border-box;
+    float: right;
+    text-align: center;
+    background-image: url("../images/cocktail.gif");
+    background-repeat: repeat-x;
+}
+#weeklySpecials h1, #weeklySpecials h2, #weeklySpecials p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* ----- FOOTER -----*/
+footer {
+    font-size: 50%;
+    text-align: center;
+    clear: both;
+}
