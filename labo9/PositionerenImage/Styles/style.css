@@ -1,0 +1,29 @@
+body {
+    font-size: 1.25em;
+}
+
+article {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    min-height: 260px;
+}
+
+article h2 {
+    margin-top: 0;
+}
+
+article:nth-child(2n) p {
+    margin: 0;
+    line-height: 1.25;
+}
+
+article:nth-child(2n+1) img{
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+article:nth-child(2n) img{
+    float: right;
+    margin: 0 0 0 10px;
+}
