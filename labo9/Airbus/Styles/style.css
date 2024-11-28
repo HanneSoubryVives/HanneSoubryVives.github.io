@@ -1,0 +1,129 @@
+/* ----- GENERAL ----- */
+body {
+    width: 95%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.bold {
+    font-weight: bold;
+}
+
+/* ----- TOP BANNER ----- */
+.topBanner {
+    height: 200px;
+    background: url("../images/bgsky3.jpg") no-repeat;
+    background-size: cover;
+
+    text-align: center;
+    color: darkblue;
+    font-weight: bold;
+
+    position: relative;
+}
+
+.topBanner h1 {
+    font-size: 300%;
+    font-style: italic;
+}
+
+.topBanner h2 {
+    font-size: 240%;
+}
+
+.topBanner img {
+    position: absolute;
+    right: 250px;
+    bottom: 60px;
+}
+
+/* ----- NEWS ----- */
+.news {
+    width: 25%;
+    background-color: #dddddd;
+
+    border: 1px solid #999999;
+    box-sizing: border-box;
+
+    float: right;
+}
+
+.news p {
+    color: #666666;
+    font-size: 90%;
+    padding: 0 10px;
+}
+
+.news h3 {
+    color: white;
+    background-color: blue;
+    font-size: 120%;
+    text-align: center;
+}
+
+/* ----- MAIN ----- */
+.mainContent {
+    width: 75%;
+    box-sizing: border-box;
+    padding-right: 10px;
+}
+
+/* ----- INTRODUCTION ----- */
+.introduction .important {
+    color: blue;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.introduction img {
+    float: left;
+    margin: 20px 20px 0 20px;
+}
+
+.introduction p {
+    text-align: justify;
+    margin: 20px 30px 20px 140px;
+}
+
+/* ----- GALLERY ----- */
+.gallery {
+    background-color: #999999;
+    padding: 20px 0 0 20px;
+}
+
+.gallery div { /*foto kaders*/
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+
+    padding: 10px;
+    margin: 0 20px 20px 0;
+
+    background-color: white;
+    border: 1px dashed #999999;
+    display: inline-block;
+}
+
+/* ----- BOTTOM BANNER ----- */
+.bottomBanner {
+    background-color: #666666;
+    color: white;
+    line-height: 2em;
+}
+
+.bottomBanner > section {
+    padding-left: 120px;
+    display: inline-block;
+}
+
+.bottomBanner a {
+    color: white;
+}
+
+.bottomBanner a:hover {
+    color: red;
+}
+
+/* ----- BOTTOM BANNER ----- */
+footer {
+    text-align: center;
+}
