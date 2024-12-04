@@ -1,0 +1,63 @@
+/*@media screen and (max-width: 768px)*/
+/*{ !* als op kleiner scherm: pas deze klasses aan*!*/
+/*    #left {*/
+/*        width:100%;*/
+/*        background-color:yellowgreen;*/
+/*    }*/
+/*    #right{*/
+/*        width:100%;*/
+/*    }*/
+/*    footer{*/
+/*        display:none;*/
+/*    }*/
+/*}  ----> dit werkt niet: #left en #right worder verder voor alle groottes overschreven!*/
+
+body{
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+p{
+    margin: 0;
+}
+header {
+    text-align:center;
+    background-color:lightsteelblue;
+}
+
+#left {
+    background-color:lightblue;
+    min-height: 200px;
+    float: left;
+    width: 75%;
+}
+
+#right {
+    background-color:lightcoral;
+    min-height: 200px;
+    float: left;
+    width: 25%;
+}
+
+footer {
+
+    text-align:center;
+    background-color:lightgreen;
+
+}
+
+@media screen and (max-width: 768px)
+{ /* als op kleiner scherm: pas deze klasses aan*/
+    #left {
+        width:50%;
+        background-color:yellowgreen;
+    }
+    #right{
+        width:50%;
+        /* geen float meer nodig want dat is al toegepast in de algemene instelling erboven */
+    }
+    footer{
+        display:none;
+    }
+}
