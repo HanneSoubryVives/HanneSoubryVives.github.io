@@ -1,0 +1,118 @@
+/* ----- general ----- */
+body {
+    font-family: "Times New Roman", sans-serif;
+    font-size: 1.1em;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ffcefe;
+    color: #faf0f6;
+    text-align: center;
+}
+
+a:link, a:visited{
+    color: #9ad9ff;
+    text-decoration: none;
+}
+
+a:hover, a:active{
+    color: #9ad9ff;
+    text-decoration: underline;
+}
+
+.col-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ----- top header ----- */
+body > header {
+    height: auto;
+    background-image: url("../images/marble.png");
+    background-size: cover;
+    background-position: center;
+}
+
+body > header > h1 {
+    padding: 35px 20px;
+    font-size: 3em;
+    text-shadow: 3px 3px 5px #3e1d46;
+}
+
+/* ----- sections ----- */
+section {
+    padding: 20px;
+    background-color: #5f1f6d;
+}
+
+section.row {
+    margin-top: 20px;
+}
+
+section > h2 {
+    font-size: 2em;
+    text-decoration: underline;
+    margin: 0 0 20px 0;
+}
+
+/* ----- personal info ----- */
+.personalInfo .frame{
+    background-color: #ffcefe;
+    border: #5f1f6d dashed 2px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.personalInfo ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+/* ----- other sections ----- */
+.detailSection img {
+    display: block;
+    margin: 5px auto;
+}
+
+.detailSection .frame{
+    background-color: #5f1f6d;
+    border: #ffcefe dashed 3px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.detailSection .frame .row{
+    padding: 0;
+}
+
+.detailSection ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.detailSection ul li {
+    padding-bottom: 20px;
+}
+
+/* ----- table ----- */
+table, th, td {
+    border: #ffcefe solid 2px;
+    border-collapse: collapse;
+    padding: 5px
+}
+
+caption {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+    text-align: left;
+    caption-side: top;
+    color: #ffcefe;
+}
+
+table {
+    margin-bottom: 25px;
+}
