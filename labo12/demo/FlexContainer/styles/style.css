@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: lightskyblue;
+    font-family: Chalkboard, sans-serif;
+}
+
+h1 {text-align: center;}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.border {border: 2px solid black;}
+
+.grey-box {
+    background: grey;
+    width: 100px;
+
+    margin: 10px;
+    padding: 20px;
+    font-size: 2em;
+
+    /*default child of flexbox
+    flex: 0 1 auto;
+    1ste getal = flex grow (0 = niet toegestaan, 1 = wel toegestaan), 2e getal is flex shrink (0 of 1),
+    3e is width (auto is ingestelde breedte of wat nodig is voor de inhoud als breedte niet ingesteld is*/
+}
+
+section {
+    background: coral;
+    height: 500px;
+
+    display: flex;
+    /*flex-direction: row; default setting*/
+    /*flex-direction: column/row-reverse;*/
+    flex-wrap: wrap;
+
+    /*justify-content: stretch; box verdeling horizontaal, default setting*/
+    justify-content: /*flex-end/flex-start*/center;
+
+    align-items: center; /*box verdeling verticaal*/
+}
