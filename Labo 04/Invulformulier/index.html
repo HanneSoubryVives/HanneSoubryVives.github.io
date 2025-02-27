@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Invulformulier</title>
+</head>
+<body>
+    <h1>Invulformulier</h1>
+    <form method="post">
+        <!-- Name -->
+        <div>
+            <label for="firstName">First name*:</label>
+            <input type="text" name="firstName" id="firstName" autofocus="autofocus" required="required"
+                   placeholder="Your first name">
+        </div>
+        <div>
+            <label for="lastName">Last name*:</label>
+            <input type="text" name="lastName" id="lastName" required="required" placeholder="Your last name">
+        </div>
+
+        <!-- Sport -->
+        <p>Which sport do you train?</p>
+        <div>
+            <label for="running">Running</label>
+            <input type="checkbox" name="sport" id="running">
+        </div>
+        <div>
+            <label for="swimming">Swimming</label>
+            <input type="checkbox" name="sport" id="swimming">
+        </div>
+        <div>
+            <label for="rowing">Rowing</label>
+            <input type="checkbox" name="sport" id="rowing">
+        </div>
+
+        <!-- Gender -->
+        <p>What is your gender?</p>
+        <div>
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+        </div>
+
+        <!-- Favorites -->
+        <div>
+            <label for="movie">Favorite movie:</label>
+            <input type="text" name="movie" id="movie">
+        </div>
+        <div>
+            <label for="quote">Favorite quote:</label>
+            <input type="text" name="quote" id="quote" placeholder="Write your favorite quote">
+        </div>
+
+        <!-- Password -->
+        <div>
+            <label for="password">Password*:</label>
+            <input type="password" name="password" id="password" required="required">
+        </div>
+
+        <!-- More favorites -->
+        <div>
+            <label for="food">Favorite food:</label>
+            <select name="food" id="food" size="1">
+                <option value="hamburger">Hamburger</option>
+                <option value="fries">Fries</option>
+                <option value="pizza">Pizza</option>
+                <option value="pasta">Pasta</option>
+            </select>
+        </div>
+
+        <!-- File & mail -->
+        <input type="file" id="file" name="file">
+        <div>
+            <label for="email">Email adress:</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email adress">
+        </div>
+
+        <!-- More favorites -->
+        <div>
+            <label for="site">Favorite site:</label>
+            <input type="url" name="site" id="site" placeholder="Enter the URL of your favorite site">
+        </div>
+        <div>
+            <label for="smallNumber">Favorite number between 1-10:</label>
+            <input type="number" name="smallNumber" id="smallNumber" min="1" max="10">
+        </div>
+        <div>
+            <label for="bigNumber">Favorite number between 11-1000:</label>
+            <input type="range" name="bigNumber" id="bigNumber" min="11" max="1000">
+        </div>
+
+        <!-- Personal info -->
+        <div>
+            <label for="birthday">When were you born?</label>
+            <input type="date" name="birthday" id="birthday">
+        </div>
+        <div>
+            <label for="zipcode">Belgium zip-code reg number*:</label>
+            <input type="text" name="zipcode" id="zipcode" maxlength="4" size="4" placeholder="9999" pattern="[0-9]{4}">
+        </div>
+
+        <!-- Search -->
+        <div>
+            <label for="search">Search for something:</label>
+            <input type="search" name="search" id="search">
+        </div>
+
+        <!-- Favorite again -->
+        <div>
+            <label for="color">What is your favorite color?</label>
+            <input type="color" name="color" id="color">
+        </div>
+
+        <!-- Submit -->
+        <input type="submit" name="submit" id="submit" value="Submit">
+
+    </form>
+
+    <script src="scripts/code.js"></script>
+</body>
+</html>

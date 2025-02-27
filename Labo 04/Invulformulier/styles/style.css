@@ -1,0 +1,12 @@
+form {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+form > div {
+    padding: 2px;
+}
+
+form > p {
+    margin: 2px;
+}
