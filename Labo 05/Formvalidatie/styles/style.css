@@ -1,0 +1,16 @@
+div {
+    margin: 5px;
+}
+
+label {
+    width: 150px;
+    display: inline-block;
+}
+
+.errorMessage {
+    color:red;
+}
+
+input.invalid {
+    border : solid 1px red;
+}
