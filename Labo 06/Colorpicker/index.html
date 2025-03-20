@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+	<title>Colorpicker</title>
+	<link rel="stylesheet" href="styles/styles.css"/>
+</head> 
+<body>
+<div class="frame">
+	<div class="sliders">
+		<p>0<input type="range" id="sliderRed" class="slider" value="0" min="0" max="255" />255</p>
+		<p>0<input type="range" id="sliderGreen" class="slider" value="0" min="0" max="255" />255</p>
+		<p>0<input type="range" id="sliderBlue" class="slider" value="0" min="0" max="255" />255</p>
+	</div>
+	<div class="values">
+		<div>
+			<label for="sliderRed">Red </label><p id="textRedValue">0</p>
+		</div>
+		<div>
+			<label for="sliderGreen">Green </label><p id="textGreenValue">0</p>
+		</div>
+		<div>
+			<label for="sliderBlue">Blue </label><p id="textBlueValue">0</p>
+		</div>
+	</div>
+	<div id="displayColor"></div>
+	<button id="btnSave">Save</button>
+</div>
+
+<div id="gallery">
+
+</div>
+
+<script charset="utf-8" src="scripts/code.js"></script>
+</body> 
+</html> 
