@@ -1,0 +1,61 @@
+body {
+    /*background-color: rgba(189, 237, 248, 0.3);*/
+    background-image: url("../images/background-image2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-blend-mode: overlay;*/
+
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Garamond, cursive;
+}
+
+.frame {
+    align-items: center;
+    padding: 0 20px;
+    width: 30%;
+    height: fit-content;
+    min-height: 50%;
+
+    border: 5px dotted #23066e;
+    border-radius: 30px;
+
+    background-color: #e4dbfd;
+}
+
+.title {
+    color: #250b81;
+    text-align: center;
+}
+
+.labsList {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    padding: 20px 0;
+    border-top: 2px solid #250b81;
+}
+
+.labsList a {
+    color: #250b81;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.labsList a:hover {
+    text-decoration: underline;
+    color: #173abd;
+}

@@ -1,0 +1,25 @@
+.home {
+    width: 100%;
+    height: fit-content;
+
+    text-align: center;
+
+    padding: 20px 0;
+    border-top: 2px solid #250b81;
+}
+
+.labsList a, .home a {
+    color: #250b81;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+}
+
+.labsList a:hover, .home a:hover {
+    text-decoration: underline;
+    color: #173abd;
+}
