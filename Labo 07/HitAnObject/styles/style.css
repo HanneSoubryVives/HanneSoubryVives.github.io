@@ -1,0 +1,25 @@
+#playField{
+    border: 1px solid black;
+
+    width: 800px;
+    height: 600px;
+
+    position: relative;
+}
+
+#target {
+    position: absolute;
+}
+
+#score {
+    margin: 3px;
+    display: inline-block;
+}
+
+#playButton {
+    margin: 3px;
+}
+
+.hidden {
+    display: none;
+}
