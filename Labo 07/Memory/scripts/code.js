@@ -65,6 +65,9 @@ const newGame = () => {
     // setup new game
     global.cardsTurned = [];
     matchesMade = 0;
+    let text = document.getElementById("score");
+    text.textContent = `Matches found: 0/${global.AMOUNT_MATCHES}`;
+
     createCards();
     global.canInteract = true;
 }
