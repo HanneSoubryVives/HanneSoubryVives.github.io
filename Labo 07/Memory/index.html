@@ -6,12 +6,30 @@
     <title>Memory</title>
 </head>
 <body>
-    <h1>Memory game</h1>
-    <button id="startButton">Start</button>
-    <p id="score">Matches found: 0/6</p>
-
-    <div id="cards">
+<h1>Memory game</h1>
+<button id="startButton">Start</button>
+<div id="settings">
+    <div>
+        <label for="amountMatches">Amount of matches: </label>
+        <span>6</span>
+        <input type="range" min="3" max="6" value="6" id="amountMatches">
     </div>
+    <div>
+        <label for="cardsPerMatch">Cards per match: </label>
+        <span>2</span>
+        <input type="range" min="2" max="4" value="2" id="cardsPerMatch">
+    </div>
+    <div>
+        <label for="gridRows">Grid rows: </label>
+        <span>3</span>
+        <input type="range" min="1" max="10" value="3" id="gridRows">
+    </div>
+</div>
+
+<p id="score">Matches found: </p>
+
+<div id="cards">
+</div>
 
 <script src="scripts/code.js"></script>
 </body>

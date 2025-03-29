@@ -27,12 +27,17 @@ body {
 
 #cards {
     display: grid;
-    grid-template: repeat(3, 100px) / repeat(4, 100px);
     grid-gap: 10px;
     margin-top: 25px;
 }
 
-#score {
-    display: inline-block;
-    margin-left: 20px;
+#settings {
+    display: grid;
+    width: fit-content;
+
+    justify-items: end;
+}
+
+#settings div {
+    width: fit-content;
 }

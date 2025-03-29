@@ -4,10 +4,11 @@ let global = {
     IMAGE_SUFFIX: '.png',
     IMAGE_BACK: 'images/achterkant.png',
 
-    // cards
-    AMOUNT_MATCHES: 6,
-    AMOUNT_COLUMNS: 4,
-    AMOUNT_ROWS: 3,
+    // cards & grid
+    amountMatches: 6,
+    amountEqualCards: 2,
+    amountColumns: 4,
+    amountRows: 3,
 
     // gameplay
     cardsTurned: [],
@@ -17,25 +18,47 @@ let global = {
 };
 
 const setup = () => {
-    createCards();
-
     let startBtn = document.getElementById('startButton');
     startBtn.addEventListener('click', newGame);
+
+    let sliders = document.querySelectorAll('#settings input');
+    for (let i = 0; i < sliders.length; i++) {
+        sliders[i].addEventListener('input', updateSliderValue);
+        sliders[i].addEventListener('change', updateSliderValue);
+    }
 }
 window.addEventListener("load", setup);
 
 const createCards = () => {
+    // read settings
+    let matchesInput = document.getElementById('amountMatches');
+    global.amountMatches = parseInt(matchesInput.value, 10);
+
+    let text = document.getElementById("score");
+    text.textContent = `Matches found: 0/${global.amountMatches}`;
+
+    let cardsPerMatchInput = document.getElementById('cardsPerMatch');
+    global.amountEqualCards = parseInt(cardsPerMatchInput.value, 10);
+
+    let amountRows = document.getElementById('gridRows');
+    global.amountRows = parseInt(amountRows.value, 10);
+    global.amountColumns = Math.ceil(global.amountMatches * global.amountEqualCards / global.amountRows);
+
+    let gallery = document.getElementById("cards");
+    gallery.style.gridTemplate = `repeat(${global.amountRows}, 100px) / repeat(${global.amountColumns}, 100px)`
+
     // get card names
     let cards = [];
-    for (let i = 1; i <= global.AMOUNT_MATCHES; i++) {
-        cards.push(i, i);
+    for (let i = 1; i <= global.amountMatches; i++) {
+        for (let j = 0; j < global.amountEqualCards; j++) {
+            cards.push(i);
+        }
     }
 
     // shuffle cards
     cards = shuffle(cards);
 
     // create elements
-    let gallery = document.getElementById("cards");
     for (let i = 0; i < cards.length; i++) {
         let newCard = document.createElement("img");
         newCard.src = global.IMAGE_BACK;
@@ -45,6 +68,10 @@ const createCards = () => {
         newCard.addEventListener("click", processCardClick)
         gallery.appendChild(newCard);
     }
+}
+
+const updateSliderValue = (event) => {
+    event.target.previousElementSibling.textContent = event.target.value;
 }
 
 const newGame = () => {
@@ -62,12 +89,11 @@ const newGame = () => {
         gallery.removeChild(cards[0]);
     }
 
-    // setup new game
+    // reset variables
     global.cardsTurned = [];
-    matchesMade = 0;
-    let text = document.getElementById("score");
-    text.textContent = `Matches found: 0/${global.AMOUNT_MATCHES}`;
+    global.matchesMade = 0;
 
+    // create game
     createCards();
     global.canInteract = true;
 }
@@ -87,7 +113,7 @@ const processCardClick = (event) => {
         global.cardsTurned.push(card);
 
         // check amount turned
-        if(global.cardsTurned.length === 2){
+        if(global.cardsTurned.length === global.amountEqualCards){
             checkMatch();
         }
     }
@@ -109,7 +135,7 @@ const collectCards = (cards) => {
     global.matchesMade++;
 
     let text = document.getElementById("score");
-    text.textContent = `Matches found: ${global.matchesMade}/${global.AMOUNT_MATCHES}`;
+    text.textContent = `Matches found: ${global.matchesMade}/${global.amountMatches}`;
 }
 
 const toggleCardColor = (cards, colorClass) => {
@@ -121,11 +147,20 @@ const toggleCardColor = (cards, colorClass) => {
 const checkMatch = () => {
     global.canInteract = false;
 
-    let cardNr = global.cardsTurned[0].getAttribute("data-cardnr");
-    let cardNr2 = global.cardsTurned[1].getAttribute("data-cardnr");
+    let cards = [];
+    for (let i = 0; i < global.cardsTurned.length; i++) {
+        cards.push(global.cardsTurned[i].getAttribute("data-cardnr"));
+    }
 
-    if(cardNr === cardNr2){
-        // if match
+    let nr = cards[0];
+    let match = true;
+    for (let i = 1; i < cards.length; i++) {
+        if(cards[i] !== nr){
+            match = false;
+        }
+    }
+
+    if(match){
         toggleCardColor(global.cardsTurned, "correct");
         global.timerId = setTimeout(() => {
             collectCards(global.cardsTurned);
@@ -134,7 +169,7 @@ const checkMatch = () => {
         }, 2000);
     }
     else {
-        // if no match
+        // no match
         toggleCardColor(global.cardsTurned, "wrong");
         global.timerId = setTimeout(() => {
             hideCards(global.cardsTurned);
