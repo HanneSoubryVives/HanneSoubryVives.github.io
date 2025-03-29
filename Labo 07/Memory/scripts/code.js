@@ -3,6 +3,7 @@ let global = {
     IMAGE_PREFIX: 'images/kaart',
     IMAGE_SUFFIX: '.png',
     IMAGE_BACK: 'images/achterkant.png',
+    MAX_CARD_NUMBER: 12,
 
     // cards & grid
     amountMatches: 6,
@@ -48,14 +49,21 @@ const createCards = () => {
     gallery.style.gridTemplate = `repeat(${global.amountRows}, 100px) / repeat(${global.amountColumns}, 100px)`
 
     // get card names
+    let cardTypes = Array.from({length: global.MAX_CARD_NUMBER}, (_, i) => i + 1)
+    cardTypes = shuffle(cardTypes);
+
+    // build deck of cards
     let cards = [];
     for (let i = 1; i <= global.amountMatches; i++) {
+        // for each match: pick random card
+        let type = cardTypes.pop();
         for (let j = 0; j < global.amountEqualCards; j++) {
-            cards.push(i);
+            // add this type of card "amountEqualCards" times to the deck
+            cards.push(type);
         }
     }
 
-    // shuffle cards
+    // shuffle deck
     cards = shuffle(cards);
 
     // create elements
