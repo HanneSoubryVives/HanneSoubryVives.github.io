@@ -36,9 +36,12 @@ const readSwatch = (swatchElement) => {
 }
 
 const readStorage = () => {
-	global.swatches = JSON.parse(localStorage.getItem("colorpicker.swatches"));
-	for (let i= 0; i < global.swatches.length; i++) {
-		createSwatch(global.swatches[i]);
+	let storedValues = localStorage.getItem("colorpicker.swatches");
+	if(storedValues !== null) {
+		global.swatches = JSON.parse();
+		for (let i = 0; i < global.swatches.length; i++) {
+			createSwatch(global.swatches[i]);
+		}
 	}
 }
 
@@ -130,8 +133,11 @@ const removeSwatch = (event) => {
 const removeSwatchFromStorage = (color) => {
 	// compare toSting values -> look at content, not reference of array
 	let index = global.swatches.findIndex((element) => element.toString() === color.toString());
-	global.swatches.splice(index, 1);
-	localStorage.setItem("colorpicker.swatches", JSON.stringify(global.swatches));
+	if(index !== -1)
+	{
+		global.swatches.splice(index, 1);
+		localStorage.setItem("colorpicker.swatches", JSON.stringify(global.swatches));
+	}
 }
 
 
