@@ -38,7 +38,7 @@ const readSwatch = (swatchElement) => {
 const readStorage = () => {
 	let storedValues = localStorage.getItem("colorpicker.swatches");
 	if(storedValues !== null) {
-		global.swatches = JSON.parse();
+		global.swatches = JSON.parse(storedValues);
 		for (let i = 0; i < global.swatches.length; i++) {
 			createSwatch(global.swatches[i]);
 		}
